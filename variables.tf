@@ -24,18 +24,18 @@ variable "instance_type" {
 }
 
 variable "subnet-id" {
-  description = "The Sunbnet ID in which we create the instances"
-  default     = "subnet-12345678987654321"
+  description = "The subnet ID in which we create the instances"
+  default     = ""
 }
 
 variable "vpc-id" {
   description = "The VPC ID where the subnet is"
-  default     = "vpc-12345678987654321"
+  default     = ""
 }
 
 variable "security-group-id" {
   description = "Security group id"
-  default     = "sg-12345678987654321"
+  default     = ""
 }
 
 # NOTE the total number of VMs will be group_names × vm_suffix
