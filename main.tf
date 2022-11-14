@@ -14,7 +14,7 @@ provider "aws" {
 
 locals {
   group_names = var.group_names
-  vms          = var.vm_suffix
+  vms         = var.vm_suffix
 
   # Nested loop over both lists, and flatten the result.
   vm_names = distinct(flatten([
@@ -28,7 +28,7 @@ locals {
 }
 
 resource "aws_instance" "instances" {
-  for_each      = { for entry in local.vm_names: "${entry.groupname}.${entry.vm}" => entry }
+  for_each                    = { for entry in local.vm_names: "${entry.groupname}.${entry.vm}" => entry }
   instance_type               = var.instance_type
   ami                         = var.ami_id
   key_name                    = "${each.value.groupname}-key"
