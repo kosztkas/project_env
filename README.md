@@ -14,7 +14,7 @@ You can use this with the following steps:
 
 ### Necessary setup
 
-1. Setting values for the following in the variables.tf file or through the environment variables:
+1. Setting values for the following either in the variables.tf file or terraform.tfvars or via env_vars:
     - AWS_ACCESS_KEY
     - AWS_SECRET_KEY
     - the VPC ID
